@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register | Flask Auth</title>
+  <style>
+    :root {
+      --bg: #f3f7fc;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #64748b;
+      --border: #dbe4ef;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --success-bg: #ecfdf3;
+      --success-text: #166534;
+      --error-bg: #fef2f2;
+      --error-text: #991b1b;
+      --warning-bg: #fff8e8;
+      --warning-text: #92400e;
+      --info-bg: #eff6ff;
+      --info-text: #1e3a8a;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
+      color: var(--text);
+      padding: 1rem;
+    }
+
+    .card {
+      width: min(420px, 94vw);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+      padding: 1.4rem;
+    }
+
+    h1 {
+      font-size: 1.45rem;
+      margin-bottom: 0.4rem;
+      color: #0f172a;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .flash-list {
+      list-style: none;
+      display: grid;
+      gap: 0.55rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .flash {
+      border: 1px solid transparent;
+      border-radius: 10px;
+      padding: 0.68rem 0.8rem;
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    .flash-success { background: var(--success-bg); color: var(--success-text); border-color: #bbf7d0; }
+    .flash-error { background: var(--error-bg); color: var(--error-text); border-color: #fecaca; }
+    .flash-warning { background: var(--warning-bg); color: var(--warning-text); border-color: #fde68a; }
+    .flash-info { background: var(--info-bg); color: var(--info-text); border-color: #bfdbfe; }
+
+    form { display: grid; gap: 0.85rem; }
+
+    label {
+      display: block;
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #334155;
+    }
+
+    input {
+      width: 100%;
+      border: 1px solid #cdd9e7;
+      border-radius: 10px;
+      padding: 0.72rem 0.8rem;
+      font-size: 0.95rem;
+      background: #fff;
+      color: #0f172a;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #93c5fd;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    }
+
+    .btn {
+      margin-top: 0.25rem;
+      border: 0;
+      border-radius: 10px;
+      padding: 0.72rem 0.9rem;
+      font-weight: 600;
+      font-size: 0.94rem;
+      color: #fff;
+      background: var(--primary);
+      cursor: pointer;
+    }
+
+    .btn:hover { background: var(--primary-hover); }
+
+    .meta-link {
+      margin-top: 1rem;
+      font-size: 0.93rem;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Create Account</h1>
+    <p>Register to start using your dashboard.</p>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class="flash-list">
+          {% for category, message in messages %}
+            <li class="flash flash-{{ category }}">{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <form method="POST" action="{{ url_for('auth.register') }}">
+      <div>
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" placeholder="Your username" required>
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+      </div>
+
+      <div>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="Create a password" required>
+      </div>
+
+      <button class="btn" type="submit">Register</button>
+    </form>
+
+    <p class="meta-link">Already have an account? <a href="{{ url_for('auth.login') }}">Login</a></p>
+  </main>
+</body>
+</html>
