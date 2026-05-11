@@ -189,3 +189,5 @@ Run the main application with:
 ```bash
 python run.py
 ```
+
+or on some systems:
