@@ -211,3 +211,7 @@ python run.py
 ```
 
 Do not use:
+
+```bash
+python test_view.py
+```
