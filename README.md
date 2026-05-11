@@ -251,3 +251,5 @@ Used for:
 Both databases should remain in place.
 
 If needed, create the folders manually:
+
+If needed, create the folders manually:
