@@ -181,3 +181,5 @@ uv pip install -r "requirements copy.txt"
 ```bash
 uv pip install -r requirements.txt
 ```
+
+### 6. Run the project
