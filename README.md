@@ -234,3 +234,5 @@ Used for:
 
 - books
 - main library data
+
+#### Auth database
