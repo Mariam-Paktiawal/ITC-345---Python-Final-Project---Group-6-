@@ -183,3 +183,5 @@ uv pip install -r requirements.txt
 ```
 
 ### 6. Run the project
+
+Run the main application with:
