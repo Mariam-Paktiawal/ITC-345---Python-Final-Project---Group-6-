@@ -242,3 +242,8 @@ Stored in:
 ```
 auth/instance/library.db
 ```
+
+Used for:
+
+- users
+- login/register authentication data
