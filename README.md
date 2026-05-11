@@ -229,3 +229,8 @@ Stored in:
 ```
 instance/library.db
 ```
+
+Used for:
+
+- books
+- main library data
