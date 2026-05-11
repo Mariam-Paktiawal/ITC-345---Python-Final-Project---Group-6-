@@ -1,7 +1,8 @@
+
 # ITC-345 Python Final Project - Group 6
 
 A Flask-based Library Management System developed as a group project.  
-This project combines a main library system with authentication features, allowing users to register, log in, manage books, and access the dashboard from one main Flask app.
+This project combines the main library system with authentication features, so users can register, log in, manage books, and access the dashboard from one main Flask app.
 
 ---
 
@@ -19,7 +20,7 @@ This application includes:
 - Delete book
 - Search and filtering for books
 - SQLite database support
-- Authentication integration with the main library system
+- Authentication integrated into the main library system
 
 ---
 
@@ -57,75 +58,70 @@ ITC-345---Python-Final-Project---Group-6-/
 └── tests/
 ```
 
+---
 
-# Why use a virtual environment (venv)?
+## Why use a virtual environment (venv)?
 
 A virtual environment keeps the packages for this project separated from the packages installed globally on your computer.
 
-This helps because:
+This is useful because:
 
 * it prevents dependency conflicts
 * it keeps the project clean
 * it makes setup easier for all group members
 * it avoids breaking other Python projects on your machine
 
+---
 
-<hr><br>
-
-# Requirements
+## Requirements
 
 Before running the project, make sure you have:
+
 * Python 3 installed
 * pip installed
 
-
-Check with:
+You can check with:
 
 ```bash
 python3 --version
 pip --version
 ```
-or:
+
+or on some systems:
 
 ```bash
 python --version
 pip3 --version
 ```
 
+---
 
-<br><hr><br>
+## 1. Clone the project
 
-# 1. Clone the project
-
-``` bash
-
+```bash
 git clone https://github.com/Mariam-Paktiawal/ITC-345---Python-Final-Project---Group-6-.git
 cd ITC-345---Python-Final-Project---Group-6-
-
 ```
 
-<br><hr><br>
+---
 
+## 2. Create the virtual environment
 
-# 2. Create the virtual environment
-
-On Linux / macOS
+### On Linux / macOS
 
 ```bash
 python3 -m venv venv
 ```
 
-On Windows
+### On Windows
 
 ```bash
 python -m venv venv
 ```
 
-<br><hr><br>
+---
 
-
-
-# 3. Activate the virtual environment
+## 3. Activate the virtual environment
 
 ### On Linux / macOS
 
@@ -145,44 +141,45 @@ venv\Scripts\activate
 venv\Scripts\Activate.ps1
 ```
 
-After activation, you should see (venv) in the terminal.
+After activation, you should see `(venv)` in your terminal.
 
-<br><hr><br>
+---
 
+## 4. Install dependencies with pip
 
-
-
-# 4. Install dependencies with pip
-
-Since we have Requirements copy.txt have to :
-
-```bash
-requirements copy.txt
-```
-install with:
+Since the project file is named `requirements copy.txt`, install the dependencies with:
 
 ```bash
 pip install -r "requirements copy.txt"
 ```
 
-<br><hr><br>
-## Python Environment and Running the Project
+---
 
-### 5. Install dependencies with uv (optional)
+## 5. Install dependencies with uv (optional)
+
+If you want, you can also use `uv`.
+
+First install it:
 
 ```bash
 pip install uv
 ```
 
+Then install the project dependencies:
+
 ```bash
 uv pip install -r "requirements copy.txt"
 ```
+
+If you rename the file later to `requirements.txt`, then you can use:
 
 ```bash
 uv pip install -r requirements.txt
 ```
 
-### 6. Run the project
+---
+
+## 6. Run the project
 
 Run the main application with:
 
@@ -198,11 +195,13 @@ python3 run.py
 
 Then open in your browser:
 
-```
+```bash
 http://127.0.0.1:5000/
 ```
 
-### Important
+---
+
+## Important
 
 For the final integrated project, use:
 
@@ -210,47 +209,47 @@ For the final integrated project, use:
 python run.py
 ```
 
-Do not use:
+Do **not** use:
 
 ```bash
 python test_view.py
 ```
 
-because test_view.py is only for testing templates and does not include the full integrated routes and blueprints.
+because `test_view.py` is only for testing templates and does not include the full integrated routes and blueprints.
 
-### Database Notes
+---
+
+## Database Notes
 
 This project uses SQLite databases.
 
-#### Main database
+### Main database
 
 Stored in:
 
-```
+```bash
 instance/library.db
 ```
 
 Used for:
 
-- books
-- main library data
+* books
+* main library data
 
-#### Auth database
+### Auth database
 
 Stored in:
 
-```
+```bash
 auth/instance/library.db
 ```
 
 Used for:
 
-- users
-- login/register authentication data
+* users
+* login and register authentication data
 
 Both databases should remain in place.
-
-If needed, create the folders manually:
 
 If needed, create the folders manually:
 
@@ -259,20 +258,109 @@ mkdir -p instance
 mkdir -p auth/instance
 ```
 
-### Main Files to Know
+---
 
-#### run.py
+## Main Files to Know
 
-The main file used to start the application.
+### `run.py`
 
-#### config.py
+The main file used to start the full application.
+
+### `config.py`
 
 Contains the app configuration and database paths.
 
-#### app/__init__.py
+### `app/__init__.py`
 
 Creates and configures the Flask app.
 
-#### app/books.py
+### `app/auth.py`
+
+Handles login, register, and logout routes connected to the main app.
+
+### `app/books.py`
 
 Handles book-related pages and actions.
+
+### `test_view.py`
+
+Used only for testing templates. It is not the final integrated project file.
+
+---
+
+## Notes About the Project
+
+* The `app/` folder contains the main integrated Flask application.
+* The `auth/` folder still contains an older separate authentication version.
+* The final project should be run from `run.py`.
+* The authentication part is already connected to the main app through `app/auth.py`.
+* The project currently uses SQLite for simplicity and easy local testing.
+
+---
+
+## Troubleshooting
+
+### Virtual environment does not activate
+
+On Windows PowerShell, if activation is blocked, try:
+
+```bash
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+
+Then run:
+
+```bash
+venv\Scripts\Activate.ps1
+```
+
+### Flask or other packages are missing
+
+Make sure the virtual environment is activated first, then run:
+
+```bash
+pip install -r "requirements copy.txt"
+```
+
+### Database folder does not exist
+
+Create it manually:
+
+```bash
+mkdir -p instance
+mkdir -p auth/instance
+```
+
+### Wrong file used to run the project
+
+Use:
+
+```bash
+python run.py
+```
+
+Do not use `test_view.py` for the final project.
+
+---
+
+## Group Project
+
+This project was developed as a group final project for ITC-345.
+Different parts of the project were worked on by different group members, then combined into one final integrated Flask application.
+
+---
+
+## Final Reminder
+
+To run the final integrated version of the project:
+
+```bash
+python run.py
+```
+
+and open:
+
+```bash
+http://127.0.0.1:5000/
+```
+
