@@ -169,3 +169,7 @@ pip install -r "requirements copy.txt"
 ## Python Environment and Running the Project
 
 ### 5. Install dependencies with uv (optional)
+
+```bash
+pip install uv
+```
