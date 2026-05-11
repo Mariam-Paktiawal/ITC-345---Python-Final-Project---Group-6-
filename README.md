@@ -1,26 +1,26 @@
-
 # ITC-345 Python Final Project - Group 6
 
-A Flask-based Library Management System developed as a group project.  
-This project combines the main library system with authentication features, so users can register, log in, manage books, and access the dashboard from one main Flask app.
+This is our final group project for ITC-345.  
+It is a Flask-based Library Management System. In this project, we combined the main library system with the authentication system, so the user can register, log in, log out, manage books, and access the dashboard from one main app.
 
 ---
 
 ## Project Overview
 
-This application includes:
+This project includes:
 
-- User registration
-- User login and logout
-- Dashboard
-- Book listing
-- Book details
-- Add book
-- Edit book
-- Delete book
-- Search and filtering for books
-- SQLite database support
-- Authentication integrated into the main library system
+- user registration
+- user login
+- user logout
+- dashboard
+- book listing
+- book details
+- add book
+- edit book
+- delete book
+- search and filtering for books
+- SQLite database
+- authentication connected with the main library system
 
 ---
 
@@ -52,7 +52,7 @@ ITC-345---Python-Final-Project---Group-6-/
 │
 ├── config.py                    # Configuration file
 ├── run.py                       # Main file to run the project
-├── test_view.py                 # Template test file (not for final app)
+├── test_view.py                 # Template test file
 ├── requirements copy.txt        # Project dependencies
 ├── README.md
 └── tests/
@@ -60,25 +60,25 @@ ITC-345---Python-Final-Project---Group-6-/
 
 ---
 
-## Why use a virtual environment (venv)?
+## Why use venv?
 
-A virtual environment keeps the packages for this project separated from the packages installed globally on your computer.
+We use a virtual environment because it keeps the packages of this project separated from the global Python packages on the computer.
 
-This is useful because:
+This helps because:
 
-* it prevents dependency conflicts
-* it keeps the project clean
-* it makes setup easier for all group members
-* it avoids breaking other Python projects on your machine
+* it avoids conflicts between packages
+* it keeps the project cleaner
+* it is easier for all group members to use the same setup
+* it does not affect other Python projects on the computer
 
 ---
 
 ## Requirements
 
-Before running the project, make sure you have:
+Before running the project, make sure you already have:
 
-* Python 3 installed
-* pip installed
+* Python 3
+* pip
 
 You can check with:
 
@@ -87,7 +87,7 @@ python3 --version
 pip --version
 ```
 
-or on some systems:
+or:
 
 ```bash
 python --version
@@ -141,13 +141,13 @@ venv\Scripts\activate
 venv\Scripts\Activate.ps1
 ```
 
-After activation, you should see `(venv)` in your terminal.
+After that, you should see `(venv)` in the terminal.
 
 ---
 
-## 4. Install dependencies with pip
+## 4. Install dependencies
 
-Since the project file is named `requirements copy.txt`, install the dependencies with:
+Because the file is named `requirements copy.txt`, install with:
 
 ```bash
 pip install -r "requirements copy.txt"
@@ -155,7 +155,7 @@ pip install -r "requirements copy.txt"
 
 ---
 
-## 5. Install dependencies with uv (optional)
+## 5. Optional: use uv
 
 If you want, you can also use `uv`.
 
@@ -165,13 +165,13 @@ First install it:
 pip install uv
 ```
 
-Then install the project dependencies:
+Then run:
 
 ```bash
 uv pip install -r "requirements copy.txt"
 ```
 
-If you rename the file later to `requirements.txt`, then you can use:
+If later the file is renamed to `requirements.txt`, then you can use:
 
 ```bash
 uv pip install -r requirements.txt
@@ -181,7 +181,7 @@ uv pip install -r requirements.txt
 
 ## 6. Run the project
 
-Run the main application with:
+To run the final integrated project, use:
 
 ```bash
 python run.py
@@ -193,7 +193,7 @@ or on some systems:
 python3 run.py
 ```
 
-Then open in your browser:
+Then open this in your browser:
 
 ```bash
 http://127.0.0.1:5000/
@@ -201,15 +201,15 @@ http://127.0.0.1:5000/
 
 ---
 
-## Important
+## Important Note
 
-For the final integrated project, use:
+For the final version of the integrated project, use:
 
 ```bash
 python run.py
 ```
 
-Do **not** use:
+Do not use:
 
 ```bash
 python test_view.py
@@ -225,33 +225,33 @@ This project uses SQLite databases.
 
 ### Main database
 
-Stored in:
+Path:
 
 ```bash
 instance/library.db
 ```
 
-Used for:
+This database is used for:
 
 * books
 * main library data
 
 ### Auth database
 
-Stored in:
+Path:
 
 ```bash
 auth/instance/library.db
 ```
 
-Used for:
+This database is used for:
 
 * users
-* login and register authentication data
+* login and registration authentication data
 
-Both databases should remain in place.
+Both databases should stay in place.
 
-If needed, create the folders manually:
+If the folders do not exist, you can create them manually:
 
 ```bash
 mkdir -p instance
@@ -260,105 +260,104 @@ mkdir -p auth/instance
 
 ---
 
-## Main Files to Know
+## Main Files
 
 ### `run.py`
 
-The main file used to start the full application.
+This is the main file used to run the whole project.
 
 ### `config.py`
 
-Contains the app configuration and database paths.
+This file contains the app configuration and database paths.
 
 ### `app/__init__.py`
 
-Creates and configures the Flask app.
+This file creates and configures the Flask application.
 
 ### `app/auth.py`
 
-Handles login, register, and logout routes connected to the main app.
+This file contains the authentication routes connected to the main app.
 
 ### `app/books.py`
 
-Handles book-related pages and actions.
+This file handles the book pages and book actions.
 
 ### `test_view.py`
 
-Used only for testing templates. It is not the final integrated project file.
+This file is only for testing templates, not for running the final integrated project.
 
 ---
 
-## Notes About the Project
+## About the Project
 
-* The `app/` folder contains the main integrated Flask application.
-* The `auth/` folder still contains an older separate authentication version.
-* The final project should be run from `run.py`.
-* The authentication part is already connected to the main app through `app/auth.py`.
-* The project currently uses SQLite for simplicity and easy local testing.
+* The `app/` folder contains the main integrated Flask app.
+* The `auth/` folder still has the older separate authentication files.
+* The final project should be started from `run.py`.
+* Authentication is connected to the main app through `app/auth.py`.
+* SQLite is used because it is simple and easy for local project testing.
 
 ---
 
 ## Troubleshooting
 
-### Virtual environment does not activate
+### venv does not activate on PowerShell
 
-On Windows PowerShell, if activation is blocked, try:
+Try this first:
 
 ```bash
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ```
 
-Then run:
+Then activate again:
 
 ```bash
 venv\Scripts\Activate.ps1
 ```
 
-### Flask or other packages are missing
+### Missing packages
 
-Make sure the virtual environment is activated first, then run:
+Make sure the virtual environment is activated, then run:
 
 ```bash
 pip install -r "requirements copy.txt"
 ```
 
-### Database folder does not exist
+### Missing database folders
 
-Create it manually:
+Create them manually:
 
 ```bash
 mkdir -p instance
 mkdir -p auth/instance
 ```
 
-### Wrong file used to run the project
+### Project not working when using test_view.py
 
+That is normal for the final project, because `test_view.py` is not the complete integrated application.
 Use:
 
 ```bash
 python run.py
 ```
 
-Do not use `test_view.py` for the final project.
-
 ---
 
-## Group Project
+## Group Project Note
 
-This project was developed as a group final project for ITC-345.
-Different parts of the project were worked on by different group members, then combined into one final integrated Flask application.
+This project was developed as a group final project.
+Different members worked on different parts, and in the end the parts were combined into one final Flask application.
 
 ---
 
 ## Final Reminder
 
-To run the final integrated version of the project:
+To run the final version:
 
 ```bash
 python run.py
 ```
 
-and open:
+Then open:
 
 ```bash
 http://127.0.0.1:5000/
