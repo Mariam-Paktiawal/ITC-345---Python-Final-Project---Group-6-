@@ -264,3 +264,7 @@ mkdir -p auth/instance
 #### run.py
 
 The main file used to start the application.
+
+#### config.py
+
+Contains the app configuration and database paths.
