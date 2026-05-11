@@ -165,3 +165,5 @@ install with:
 pip install -r "requirements copy.txt"
 ```
 
+<br><hr><br>
+## Python Environment and Running the Project
