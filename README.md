@@ -4,11 +4,12 @@ This is our final group project for ITC-345.
 It is a Flask-based Library Management System. In this project, we combined the main library system with the authentication system, so the user can register, log in, log out, manage books, and access the dashboard from one main app.
 
 
-Contributors
-Mariam Paktiawal: Database and Models, Github Repository
-Diba Nasimi: Authentication and User Management
-Ghulam Mahfoz Osmani: Book Management and Search, Documentation
-Mahrukh Mohammadi: Design of Website, Testing 
+# Contributors
+
+- Mariam Paktiawal: Database and Models, Github Repository
+- Diba Nasimi: Authentication and User Management
+- Ghulam Mahfoz Osmani: Book Management and Search, Documentation
+- Mahrukh Mohammadi: Design of Website, Testing 
 ---
 
 ## Project Overview
