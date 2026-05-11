@@ -93,7 +93,7 @@ pip3 --version
 ```
 
 
-
+<br><hr><br>
 
 # 1. Clone the project
 
@@ -103,3 +103,12 @@ git clone https://github.com/Mariam-Paktiawal/ITC-345---Python-Final-Project---G
 cd ITC-345---Python-Final-Project---Group-6-
 
 ```
+
+<br><hr><br>
+
+
+# 2. Create the virtual environment
+On Linux / macOS
+python3 -m venv venv
+On Windows
+python -m venv venv
