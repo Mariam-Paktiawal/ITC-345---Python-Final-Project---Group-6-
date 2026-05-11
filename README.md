@@ -253,3 +253,8 @@ Both databases should remain in place.
 If needed, create the folders manually:
 
 If needed, create the folders manually:
+
+```bash
+mkdir -p instance
+mkdir -p auth/instance
+```
