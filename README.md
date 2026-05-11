@@ -149,7 +149,7 @@ After activation, you should see `(venv)` in the terminal.
 
 ## 4. Install dependencies
 
-Because the file is named `requirements copy.txt`, install the dependencies with:
+Because our file is named `requirements copy.txt`, install the dependencies with:
 
 ```bash
 pip install -r "requirements copy.txt"
