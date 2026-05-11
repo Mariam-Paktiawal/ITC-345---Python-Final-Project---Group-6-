@@ -217,3 +217,5 @@ python test_view.py
 ```
 
 because test_view.py is only for testing templates and does not include the full integrated routes and blueprints.
+
+### Database Notes
