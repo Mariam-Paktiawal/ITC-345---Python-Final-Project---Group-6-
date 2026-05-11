@@ -247,3 +247,5 @@ Used for:
 
 - users
 - login/register authentication data
+
+Both databases should remain in place.
