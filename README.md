@@ -9,18 +9,18 @@ It is a Flask-based Library Management System. In this project, we combined the 
 
 This project includes:
 
-- user registration
-- user login
-- user logout
-- dashboard
-- book listing
-- book details
-- add book
-- edit book
-- delete book
-- search and filtering for books
-- SQLite database
-- authentication connected with the main library system
+- User registration
+- User login
+- User logout
+- Dashboard
+- Book listing
+- Book details
+- Add book
+- Edit book
+- Delete book
+- Search and filtering for books
+- SQLite database support
+- Authentication connected to the main library system
 
 ---
 
@@ -60,16 +60,16 @@ ITC-345---Python-Final-Project---Group-6-/
 
 ---
 
-## Why use venv?
+## Why use a virtual environment?
 
-We use a virtual environment because it keeps the packages of this project separated from the global Python packages on the computer.
+We use a virtual environment because it keeps the packages for this project separated from the global Python packages installed on the computer.
 
 This helps because:
 
 * it avoids conflicts between packages
 * it keeps the project cleaner
-* it is easier for all group members to use the same setup
-* it does not affect other Python projects on the computer
+* it makes the setup easier for all group members
+* it does not affect other Python projects on the same computer
 
 ---
 
@@ -77,8 +77,8 @@ This helps because:
 
 Before running the project, make sure you already have:
 
-* Python 3
-* pip
+* Python 3 installed
+* pip installed
 
 You can check with:
 
@@ -102,6 +102,8 @@ pip3 --version
 git clone https://github.com/Mariam-Paktiawal/ITC-345---Python-Final-Project---Group-6-.git
 cd ITC-345---Python-Final-Project---Group-6-
 ```
+
+> Note: if the repository is private, only users with access can clone it.
 
 ---
 
@@ -141,13 +143,13 @@ venv\Scripts\activate
 venv\Scripts\Activate.ps1
 ```
 
-After that, you should see `(venv)` in the terminal.
+After activation, you should see `(venv)` in the terminal.
 
 ---
 
 ## 4. Install dependencies
 
-Because the file is named `requirements copy.txt`, install with:
+Because the file is named `requirements copy.txt`, install the dependencies with:
 
 ```bash
 pip install -r "requirements copy.txt"
@@ -155,7 +157,7 @@ pip install -r "requirements copy.txt"
 
 ---
 
-## 5. Optional: use uv
+## 5. Optional: install dependencies with uv
 
 If you want, you can also use `uv`.
 
@@ -165,16 +167,10 @@ First install it:
 pip install uv
 ```
 
-Then run:
+Then install the dependencies with:
 
 ```bash
 uv pip install -r "requirements copy.txt"
-```
-
-If later the file is renamed to `requirements.txt`, then you can use:
-
-```bash
-uv pip install -r requirements.txt
 ```
 
 ---
@@ -195,7 +191,7 @@ python3 run.py
 
 Then open this in your browser:
 
-```bash
+```text
 http://127.0.0.1:5000/
 ```
 
@@ -203,13 +199,13 @@ http://127.0.0.1:5000/
 
 ## Important Note
 
-For the final version of the integrated project, use:
+For the final integrated version of the project, use:
 
 ```bash
 python run.py
 ```
 
-Do not use:
+Do **not** use:
 
 ```bash
 python test_view.py
@@ -227,7 +223,7 @@ This project uses SQLite databases.
 
 Path:
 
-```bash
+```text
 instance/library.db
 ```
 
@@ -240,7 +236,7 @@ This database is used for:
 
 Path:
 
-```bash
+```text
 auth/instance/library.db
 ```
 
@@ -251,11 +247,20 @@ This database is used for:
 
 Both databases should stay in place.
 
-If the folders do not exist, you can create them manually:
+If the folders do not exist, you can create them manually.
+
+### On Linux / macOS
 
 ```bash
 mkdir -p instance
 mkdir -p auth/instance
+```
+
+### On Windows
+
+```bash
+mkdir instance
+mkdir auth\instance
 ```
 
 ---
@@ -290,8 +295,8 @@ This file is only for testing templates, not for running the final integrated pr
 
 ## About the Project
 
-* The `app/` folder contains the main integrated Flask app.
-* The `auth/` folder still has the older separate authentication files.
+* The `app/` folder contains the main integrated Flask application.
+* The `auth/` folder still contains the older separate authentication files.
 * The final project should be started from `run.py`.
 * Authentication is connected to the main app through `app/auth.py`.
 * SQLite is used because it is simple and easy for local project testing.
@@ -300,7 +305,7 @@ This file is only for testing templates, not for running the final integrated pr
 
 ## Troubleshooting
 
-### venv does not activate on PowerShell
+### Virtual environment does not activate on PowerShell
 
 Try this first:
 
@@ -324,16 +329,26 @@ pip install -r "requirements copy.txt"
 
 ### Missing database folders
 
-Create them manually:
+Create them manually.
+
+#### On Linux / macOS
 
 ```bash
 mkdir -p instance
 mkdir -p auth/instance
 ```
 
-### Project not working when using test_view.py
+#### On Windows
+
+```bash
+mkdir instance
+mkdir auth\instance
+```
+
+### Project not working when using `test_view.py`
 
 That is normal for the final project, because `test_view.py` is not the complete integrated application.
+
 Use:
 
 ```bash
@@ -344,14 +359,13 @@ python run.py
 
 ## Group Project Note
 
-This project was developed as a group final project.
-Different members worked on different parts, and in the end the parts were combined into one final Flask application.
+This project was developed as a group final project. Different members worked on different parts, and in the end the parts were combined into one final Flask application.
 
 ---
 
 ## Final Reminder
 
-To run the final version:
+To run the final version of the project:
 
 ```bash
 python run.py
@@ -359,7 +373,6 @@ python run.py
 
 Then open:
 
-```bash
+```text
 http://127.0.0.1:5000/
 ```
-
