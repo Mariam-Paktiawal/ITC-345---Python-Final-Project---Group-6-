@@ -260,3 +260,7 @@ mkdir -p auth/instance
 ```
 
 ### Main Files to Know
+
+#### run.py
+
+The main file used to start the application.
