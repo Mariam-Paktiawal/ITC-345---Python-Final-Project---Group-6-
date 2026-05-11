@@ -55,3 +55,39 @@ ITC-345---Python-Final-Project---Group-6-/
 ├── requirements copy.txt        # Project dependencies
 ├── README.md
 └── tests/
+```
+
+
+# Why use a virtual environment (venv)?
+
+A virtual environment keeps the packages for this project separated from the packages installed globally on your computer.
+
+This helps because:
+
+* it prevents dependency conflicts
+* it keeps the project clean
+* it makes setup easier for all group members
+* it avoids breaking other Python projects on your machine
+
+
+<hr><br>
+
+# Requirements
+
+Before running the project, make sure you have:
+* Python 3 installed
+* pip installed
+
+
+Check with:
+
+```bash
+python3 --version
+pip --version
+```
+or:
+
+```bash
+python --version
+pip3 --version
+```
