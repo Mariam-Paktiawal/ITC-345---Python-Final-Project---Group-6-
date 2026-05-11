@@ -223,3 +223,9 @@ because test_view.py is only for testing templates and does not include the full
 This project uses SQLite databases.
 
 #### Main database
+
+Stored in:
+
+```
+instance/library.db
+```
