@@ -191,3 +191,7 @@ python run.py
 ```
 
 or on some systems:
+
+```bash
+python3 run.py
+```
