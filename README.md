@@ -258,3 +258,5 @@ If needed, create the folders manually:
 mkdir -p instance
 mkdir -p auth/instance
 ```
+
+### Main Files to Know
