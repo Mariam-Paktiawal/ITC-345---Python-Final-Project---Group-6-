@@ -173,3 +173,7 @@ pip install -r "requirements copy.txt"
 ```bash
 pip install uv
 ```
+
+```bash
+uv pip install -r "requirements copy.txt"
+```
