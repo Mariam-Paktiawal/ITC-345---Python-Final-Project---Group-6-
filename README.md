@@ -195,3 +195,5 @@ or on some systems:
 ```bash
 python3 run.py
 ```
+
+Then open in your browser:
