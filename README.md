@@ -148,3 +148,20 @@ venv\Scripts\Activate.ps1
 After activation, you should see (venv) in the terminal.
 
 <br><hr><br>
+
+
+
+
+# 4. Install dependencies with pip
+
+Since we have Requirements copy.txt have to :
+
+```bash
+requirements copy.txt
+```
+install with:
+
+```bash
+pip install -r "requirements copy.txt"
+```
+
