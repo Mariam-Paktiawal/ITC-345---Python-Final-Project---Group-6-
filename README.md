@@ -249,3 +249,5 @@ Used for:
 - login/register authentication data
 
 Both databases should remain in place.
+
+If needed, create the folders manually:
