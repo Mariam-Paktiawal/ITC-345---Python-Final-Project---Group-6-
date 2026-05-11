@@ -272,3 +272,7 @@ Contains the app configuration and database paths.
 #### app/__init__.py
 
 Creates and configures the Flask app.
+
+#### app/books.py
+
+Handles book-related pages and actions.
