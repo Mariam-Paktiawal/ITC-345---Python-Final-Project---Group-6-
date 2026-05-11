@@ -221,3 +221,5 @@ because test_view.py is only for testing templates and does not include the full
 ### Database Notes
 
 This project uses SQLite databases.
+
+#### Main database
