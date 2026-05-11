@@ -108,7 +108,16 @@ cd ITC-345---Python-Final-Project---Group-6-
 
 
 # 2. Create the virtual environment
+
 On Linux / macOS
+
+```bash
 python3 -m venv venv
+```
+
 On Windows
+
+```bash
 python -m venv venv
+```
+
