@@ -13,56 +13,56 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark shadow">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="/">AUAF Library</a>
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link active" href="/">Home</a>
-                <a class="nav-link" href="/login">Login</a>
-                <a class="nav-link" href="/register">Register</a>
-                <a class="nav-link" href="/dashboard">Dashboard</a>
-                <a class="nav-link" href="/books">Books List</a>
+<nav class="navbar navbar-expand-lg navbar-dark shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="{{ url_for('home') }}">AUAF Library</a>
+        <div class="navbar-nav ms-auto">
+            <a class="nav-link active" href="{{ url_for('home') }}">Home</a>
+            <a class="nav-link" href="{{ url_for('auth.login') }}">Login</a>
+            <a class="nav-link" href="{{ url_for('auth.register') }}">Register</a>
+        </div>
+    </div>
+</nav>
+
+<div class="hero-section text-center">
+    <div class="container">
+        <h1 class="display-3 fw-bold text-dark">Library Management System</h1>
+        <p class="lead text-muted mb-4">
+            Books system + authentication system connected inside one main Flask app.
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="{{ url_for('auth.login') }}" class="btn btn-primary btn-lg px-4 gap-3">Login</a>
+            <a href="{{ url_for('auth.register') }}" class="btn btn-outline-secondary btn-lg px-4">Register</a>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="p-3">
+                <h3>Authentication</h3>
+                <p>Login, registration, and logout work from the auth database.</p>
             </div>
         </div>
-    </nav>
-
-    <div class="hero-section text-center">
-        <div class="container">
-            <h1 class="display-3 fw-bold text-dark">Library Management System</h1>
-            <p class="lead text-muted mb-4">Welcome to the frontend module of our group project.</p>
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <a href="/login" class="btn btn-primary btn-lg px-4 gap-3">Get Started</a>
-                <a href="/books" class="btn btn-outline-secondary btn-lg px-4">View Catalog</a>
+        <div class="col-md-4">
+            <div class="p-3">
+                <h3>Library</h3>
+                <p>Books and library records stay in the main library database.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-3">
+                <h3>One App</h3>
+                <p>Everything runs from one Flask application through run.py.</p>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="container mt-5">
-        <div class="row text-center">
-            <div class="col-md-4">
-                <div class="p-3">
-                    <h3>Clean Design</h3>
-                    <p>Using Bootstrap 5 for a modern and responsive user interface.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-3">
-                    <h3>Fast Access</h3>
-                    <p>Quick links to dashboard, books, and user authentication.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-3">
-                    <h3>Organized</h3>
-                    <p>All templates are connected through a central navigation system.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer class="py-4 my-4 border-top text-center text-muted">
-        Mah Rukh (Ivan) &copy; 2026 - Final Project Group 6
-    </footer>
+<footer class="py-4 my-4 border-top text-center text-muted">
+    Group 6 Final Project
+</footer>
 
 </body>
 </html>
