@@ -236,3 +236,9 @@ Used for:
 - main library data
 
 #### Auth database
+
+Stored in:
+
+```
+auth/instance/library.db
+```
