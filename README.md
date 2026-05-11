@@ -91,3 +91,15 @@ or:
 python --version
 pip3 --version
 ```
+
+
+
+
+# 1. Clone the project
+
+``` bash
+
+git clone https://github.com/Mariam-Paktiawal/ITC-345---Python-Final-Project---Group-6-.git
+cd ITC-345---Python-Final-Project---Group-6-
+
+```
