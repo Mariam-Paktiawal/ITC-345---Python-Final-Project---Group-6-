@@ -121,3 +121,14 @@ On Windows
 python -m venv venv
 ```
 
+<br><hr><br>
+
+
+
+# 3. Activate the virtual environment
+
+On Linux / macOS
+
+```bash
+source venv/bin/activate
+```
